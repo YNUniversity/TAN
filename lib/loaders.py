@@ -30,8 +30,8 @@ class AUGAN_scene(Dataset):
                  data="data/",
                  numTx=80,
                  sample_size=1,
-                 add_noise=True,
-                 mean=0, sigma=50,                    # Noise mean and standard deviation initialization
+                 add_noise=False,
+                 mean=0, sigma=30,                    # Noise mean and standard deviation initialization
                  sample_num=30,
                  transform=transforms.ToTensor()):
 
