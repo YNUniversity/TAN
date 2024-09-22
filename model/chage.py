@@ -70,6 +70,8 @@ class DC(nn.Module):
 
         self.down_level1_block1 = DEBlockTrain(default_conv, base_dim, 3)
         self.down_level1_block2 = DEBlockTrain(default_conv, base_dim, 3)
+        self.down_level1_block3 = DEBlockTrain(default_conv, base_dim, 3)
+        self.down_level1_block4 = DEBlockTrain(default_conv, base_dim, 3)
 
         self.up_level1_block1 = DEBlockTrain(default_conv, base_dim, 3)
         self.up_level1_block2 = DEBlockTrain(default_conv, base_dim, 3)
@@ -79,6 +81,8 @@ class DC(nn.Module):
         self.fe_level_2 = nn.Conv2d(in_channels=base_dim * 2, out_channels=base_dim * 2, kernel_size=3, stride=1, padding=1)
         self.down_level2_block1 = DEBlockTrain(default_conv, base_dim * 2, 3)
         self.down_level2_block2 = DEBlockTrain(default_conv, base_dim * 2, 3)
+        self.down_level2_block3 = DEBlockTrain(default_conv, base_dim * 2, 3)
+        self.down_level2_block4 = DEBlockTrain(default_conv, base_dim * 2, 3)
 
         self.up_level2_block1 = DEBlockTrain(default_conv, base_dim, 3)
         self.up_level2_block2 = DEBlockTrain(default_conv, base_dim, 3)
@@ -89,6 +93,8 @@ class DC(nn.Module):
         self.fe_level_3 = nn.Conv2d(in_channels=base_dim * 4, out_channels=base_dim * 4, kernel_size=3, stride=1, padding=1)
         self.down_level3_block1 = DEBlockTrain(default_conv, base_dim * 4, 3)
         self.down_level3_block2 = DEBlockTrain(default_conv, base_dim * 4, 3)
+        self.down_level3_block3 = DEBlockTrain(default_conv, base_dim * 4, 3)
+        self.down_level3_block4 = DEBlockTrain(default_conv, base_dim * 4, 3)
 
         self.up_level3_block1 = DEBlockTrain(default_conv, base_dim * 2, 3)
         self.up_level3_block2 = DEBlockTrain(default_conv, base_dim * 2, 3)
@@ -99,6 +105,8 @@ class DC(nn.Module):
         self.fe_level_4 = nn.Conv2d(in_channels=base_dim * 8, out_channels=base_dim * 8, kernel_size=3, stride=1, padding=1)
         self.down_level4_block1 = DEBlockTrain(default_conv, base_dim * 8, 3)
         self.down_level4_block2 = DEBlockTrain(default_conv, base_dim * 8, 3)
+        self.down_level4_block3 = DEBlockTrain(default_conv, base_dim * 8, 3)
+        self.down_level4_block4 = DEBlockTrain(default_conv, base_dim * 8, 3)
 
         self.up_level4_block1 = DEBlockTrain(default_conv, base_dim * 4, 3)
         self.up_level4_block2 = DEBlockTrain(default_conv, base_dim * 4, 3)
